@@ -48,6 +48,11 @@ body {
   background-color: #19bb9b;
 }
 
+.background-head {
+  position: sticky;
+  top: 0;
+}
+
 .user-control {
   display: flex;
 }
@@ -198,26 +203,50 @@ body {
 
 /* Hero section */
 
-.hero-title {
-  padding-top: 200px;
-  text-align: center;
-  margin: 0px;
-}
-
 .background-img {
-  display: block;
-  position: relative;
-  background-image: url(../images/banner.png);
+  margin: 0 auto;
   height: 600px;
-  width: 100%;
+  width: 1600px;
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../images/banner.png);
   background-repeat: no-repeat;
   background-position: center;
 }
 
+.hero-title {
+  padding-top: 210px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 0px;
+}
+
+.title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 48px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fffcfc;
+  margin: 0;
+}
+
+.top-design {
+  font-weight: 400;
+}
+
+.item-design {
+  font-weight: 600;
+  color: #1abc9c;
+}
+
+.bottom-design {
+  font-weight: 600;
+}
+
 .button-hero {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   text-decoration: none;
   text-transform: uppercase;
   font-size: 14px;
@@ -226,6 +255,7 @@ body {
   width: 120px;
   height: 40px;
   display: flex;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
   background-color: #4ec6ab;
@@ -242,35 +272,11 @@ body {
   display: flex;
 }
 
-.top-design {
-  font-family: ;
-  font-size: 48px;
-  font-weight: lighter;
-  text-transform: uppercase;
-  text-align: center;
-  color: #fffcfc;
-}
-
-.item-design {
-  font-family: ;
-  font-size: 48px;
-  font-weight: lighter;
-  text-transform: uppercase;
-  text-align: center;
-  color: #1abc9c;
-}
-
-.bottom-design {
-  font-family: var(--title-style);
-  font-size: 48px;
-  font-weight: 400;
-  color: #fffcfc;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 /* Information delivery */
+
+.information {
+  padding-bottom: 290px;
+}
 
 .info-settings {
   flex-basis: calc(100% / 4 - 30px);
@@ -286,20 +292,37 @@ body {
   justify-content: space-between;
   margin: 0px;
   padding: 0px;
-  padding-top: 220px;
+  padding-top: 100px;
 }
 
-.info-title::before {
-  content: '';
+.icon-settings {
   background-image: url(../images/icons/settings.png);
-  height: 65px;
-  width: 100%;
+}
+
+.icon-money {
+  background-image: url(../images/icons/moneyback.png);
+}
+
+.icon-worldwide {
+  background-image: url(../images/icons/world-1.png);
+}
+
+.icon-shipping {
+  background-image: url(../images/icons/world-2.png);
+}
+
+.control {
+  padding-top: 100px;
+  height: 55px;
+  width: 55px;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-. .info-title {
+.info-title {
+  padding-top: 50px;
+  margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -307,9 +330,18 @@ body {
 }
 
 .about-info {
+  padding: 0px;
+  padding-top: 30px;
+  margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
   font-weight: lighter;
+}
+
+/* New collection */
+
+.new-collection {
+  background-color: #e9effd;
 }
 
 /* Main product page */
@@ -320,8 +352,8 @@ body {
   font-weight: bold;
   color: var(--title-color);
   padding-top: 100px;
-  margin-top: 0;
-  margin-bottom: 130px;
+  padding-bottom: 120px;
+  margin: 0px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -402,7 +434,32 @@ body {
   font-weight: bold;
 }
 
+.overlay {
+  position: relative;
+  display: flex;
+}
+
+.featured-list .overlay::before {
+  position: absolute;
+  display: none;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.overlay:hover::before {
+  display: flex;
+}
+
 /* News section */
+
+.latest-news {
+  background-color: #e9effd;
+}
 
 .news-list {
   display: flex;
@@ -480,6 +537,41 @@ body {
   background-color: #4dc5ab;
 }
 
+.footer {
+  padding-bottom: 70px;
+}
+
 .footer-description {
   text-align: center;
+  padding: 0px;
+  margin: 0px;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: 'Open Sans', sans-serif;
+  color: #fbfefd;
+}
+
+.mail-reg {
+  width: 450px;
+  height: 60px;
+  border: 1px solid #ffffff;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.registration-form {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.email-button {
+  background-image: url(../images/icons/button-email.png);
+  width: 90px;
+  height: 60px;
+  border: 2px solid #ffffff;
+  border-radius: 0 10px 10px 0;
+  overflow: hidden;
 }
