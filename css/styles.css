@@ -209,8 +209,8 @@ body {
   width: 1600px;
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.6),
-      rgba(0, 0, 0, 0.4)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
     ),
     url(../images/banner.png);
   background-repeat: no-repeat;
@@ -352,10 +352,26 @@ body {
   font-weight: bold;
   color: var(--title-color);
   padding-top: 100px;
-  padding-bottom: 120px;
+  padding-bottom: 70px;
   margin: 0px;
   text-align: center;
   text-transform: uppercase;
+}
+
+.line-bolt::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #4ec6ab;
+  border-top: 2px solid #4ec6ab;
+  width: 165px;
+  height: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #4ec6ab;
+  background-clip: content-box;
 }
 
 .products-list {
@@ -479,18 +495,31 @@ body {
 
 .news-title {
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 600;
   line-height: 15px;
   font-family: var(--primary-text-style);
-  margin-top: 0px;
-  margin-bottom: 45px;
+  margin: 0px;
+  padding-bottom: 25px;
   cursor: pointer;
   color: var(--primary-text-color);
+}
+
+.news-line::after {
+  content: '';
+  display: block;
+  border-top: 3px solid #4ec6ab;
+  width: 135px;
+  margin: 0px;
+  margin-top: 15px;
+  margin-right: auto;
+  background-color: #4ec6ab;
+  background-clip: content-box;
 }
 
 .hot-news .about {
   font-family: var(--primary-text-style);
   font-size: 14px;
+  font-weight: 400;
   line-height: 17px;
   margin-top: 0;
   margin-bottom: 20px;
@@ -523,7 +552,7 @@ body {
 }
 
 .button-article:hover {
-  transform: translate(+2px) scale(1.05);
+  transform: translateX(+2px) scale(1.05);
 }
 
 /* Footer */
@@ -538,7 +567,23 @@ body {
 }
 
 .footer {
-  padding-bottom: 70px;
+  padding-bottom: 27px;
+}
+
+.footer-line::after {
+  content: '';
+  display: block;
+  border-bottom: 2px solid #ffffff;
+  border-top: 2px solid #ffffff;
+  width: 165px;
+  height: 7px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  margin-top: 28px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  background-clip: content-box;
 }
 
 .footer-description {
@@ -554,6 +599,7 @@ body {
 .mail-reg {
   width: 450px;
   height: 60px;
+  padding-left: 30px;
   border: 1px solid #ffffff;
   border-radius: 5px 0 0 5px;
   font-size: 16px;
@@ -574,4 +620,9 @@ body {
   border: 2px solid #ffffff;
   border-radius: 0 10px 10px 0;
   overflow: hidden;
+  transition: 0.5s all ease;
+}
+
+.email-button:hover {
+  transform: translateX(-5px) scale(1.05);
 }
