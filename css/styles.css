@@ -95,6 +95,10 @@ body {
   font-weight: lighter;
 }
 
+.feedback:hover {
+  color: #aaa9a9;
+}
+
 .contacts .call {
   display: flex;
   justify-content: center;
