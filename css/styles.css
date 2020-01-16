@@ -197,7 +197,6 @@ body {
 
 .main-head {
   min-height: 100px;
-  margin-bottom: 70px;
   margin: 0px;
 }
 
@@ -206,7 +205,6 @@ body {
 .background-img {
   margin: 0 auto;
   height: 600px;
-  width: 1600px;
   background-image: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.5),
@@ -221,7 +219,8 @@ body {
   padding-top: 210px;
   padding-bottom: 20px;
   text-align: center;
-  margin: 0px;
+  margin: 0 auto;
+  width: 50%;
 }
 
 .title {
@@ -323,6 +322,7 @@ body {
 .info-title {
   padding-top: 50px;
   margin: 0px;
+  margin-bottom: 30px;
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 600;
@@ -331,7 +331,6 @@ body {
 
 .about-info {
   padding: 0px;
-  padding-top: 30px;
   margin: 0px;
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -499,7 +498,6 @@ body {
   line-height: 15px;
   font-family: var(--primary-text-style);
   margin: 0px;
-  padding-bottom: 25px;
   cursor: pointer;
   color: var(--primary-text-color);
 }
@@ -607,7 +605,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-.registration-form {
+.email-form {
   display: flex;
   justify-content: center;
   padding-top: 40px;
